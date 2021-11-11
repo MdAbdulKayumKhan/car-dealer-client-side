@@ -1,10 +1,6 @@
 import React from 'react';
 import {
     Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption,
     Button
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

@@ -1,0 +1,18 @@
+
+.login form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.login input{
+    width: 70%;
+}
+@media only screen and (max-device-width: 960px) {
+    .login input{
+        width: 80%;
+    }
+    .car-img{
+        padding: 70px;
+    }
+}

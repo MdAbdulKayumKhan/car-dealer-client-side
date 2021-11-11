@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Container, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import {Container, Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../../img/logo-dark.png';
 
 const Navigation = () => {
@@ -23,12 +24,9 @@ const Navigation = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
+                            <Nav.Link as={Link} to="/Login">Login</Nav.Link>
+                            <Nav.Link as={Link} to="/register">Register</Nav.Link>
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
