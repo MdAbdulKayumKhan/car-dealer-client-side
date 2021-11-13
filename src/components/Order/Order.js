@@ -44,7 +44,7 @@ const Order = () => {
     return (
         <div>
             <Navigation></Navigation>
-            <h1>this is Order</h1>
+            <h1>Place Your Order</h1>
             <div className="container">
                 <div className="row">
                 <div className="col-12 col-md-6 col-lg-6">
@@ -68,7 +68,7 @@ const Order = () => {
                             <textarea type="text" {...register("address", { required: true })} placeholder="Your Address" />
                             <input type="number" {...register("phone", { required: true })} placeholder="Your Phone Number" />
                             
-                            <input type="submit" value="Order" />
+                            <input type="submit" value="Place Order" />
                         </form>
                     </div>
 

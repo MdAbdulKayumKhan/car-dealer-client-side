@@ -38,7 +38,7 @@ const Home = () => {
                                 <div class="card-footer">
                                     <small class="text-muted">
                                         <Link to={`/order/${listedProduct._id}`}>
-                                        <button type="button" class="btn btn-primary btn-sm">Order Now</button>
+                                        <button type="button" class="btn btn-primary btn-sm">Purchase Now</button>
                                         </Link>
                                     </small>
                                 </div>

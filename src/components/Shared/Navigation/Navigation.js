@@ -34,7 +34,8 @@ const Navigation = () => {
                         </Nav>
                         <Nav>
                             
-                            <Nav.Link as={Link} to="/products">Products</Nav.Link>
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/products">Explore</Nav.Link>
                             {!user?.email &&
                                 <Nav>
                                     <Nav.Link as={Link} to="/login">Login</Nav.Link>
@@ -43,8 +44,9 @@ const Navigation = () => {
                             }
                             {user?.email &&
                                 <Nav>
-                                    <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link>
-                                    <Nav.Link as={Link} to="/dashboard">Deshboard</Nav.Link>
+                                    
+                                    <Nav.Link as={Link} to="/dashboard">Deshboard</Nav.Link>{' '}
+                                    {user.email &&  <Nav.Link><i className="fas fa-user-circle"></i>{user?.displayName}</Nav.Link>}
                                     <Nav.Link as={Link} to="/login"><button onClick={handleLogOut} type="button" className="btn btn-outline-dark">Logout</button></Nav.Link>
                                 </Nav>
                             }

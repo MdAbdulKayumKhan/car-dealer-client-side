@@ -33,9 +33,6 @@ function App() {
             <PrivateRoute path="/order/:orderId">
               <Order></Order>
             </PrivateRoute>
-            <PrivateRoute path="/addProduct">
-              <AddProduct></AddProduct>
-            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
