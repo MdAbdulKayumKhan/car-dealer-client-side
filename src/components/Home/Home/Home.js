@@ -82,13 +82,53 @@ const Home = () => {
                                                 <div className="M-flex">
                                                     <h2 className="title"><span>{rt.name}</span></h2>
                                                     <div className="rating-row">
-                                                        <ul>
-                                                            <li className=""><i className="fa fa-star"></i></li>
-                                                            <li className=""><i className="fa fa-star"></i></li>
-                                                            <li className=""><i className="fa fa-star"></i></li>
-                                                            <li className=""><i className="fa fa-star-o"></i></li>
-                                                            <li className=""><i className="fa fa-star-o"></i></li>
-                                                        </ul>
+                                                        
+                                                        {rt.rating === '1' &&
+                                                            <ul>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        }
+                                                        {rt.rating === '2' &&
+                                                            <ul>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        }
+                                                        {rt.rating === '3' &&
+                                                            <ul>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        }
+                                                        {rt.rating === '4' &&
+                                                            <ul>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        }
+                                                        {rt.rating === '5' &&
+                                                            <ul>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                                <li className=""><i className="fa fa-star"></i></li>
+                                                            </ul>
+                                                        }
+
                                                     </div>
                                                 </div>
                                                 <div className="description">{rt.review}</div>
