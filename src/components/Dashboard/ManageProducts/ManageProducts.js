@@ -47,7 +47,7 @@ const ManageProducts = () => {
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                {!isLoading &&
+                
                     <tbody>
                     {
                         products.map(product => (
@@ -61,15 +61,11 @@ const ManageProducts = () => {
                                 <td><button onClick={()=> handleDelete(product._id)} type="button" className="btn btn-danger">Delete</button></td>
                             </tr>
                         ))
-                    }
+                    
+                        }
 
-
-                </tbody>}
-                {isLoading &&
-                    <div class="spinner-grow text-primary" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                }
+                </tbody>
+               
             </table>
         </div>
     );

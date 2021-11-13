@@ -53,6 +53,7 @@ const useFirebase = () => {
                 history.replace(distination);
                 setAuthError(''); 
                 const user = userCredential.user;
+                // console.log(user)
                 // ...
             })
             .catch((error) => {

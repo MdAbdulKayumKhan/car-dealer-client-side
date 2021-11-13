@@ -14,6 +14,7 @@ import PaymentSystem from '../PaymentSystem/PaymentSystem';
 import MyOrders from '../MyOrders/MyOrders';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
+import Reviews from '../Reviews/Reviews';
 
 
 
@@ -77,11 +78,15 @@ const Dashboard = () => {
                         <Route path={`${path}/paymentSystem`}>
                             <PaymentSystem></PaymentSystem>
                         </Route>
+                        <Route path={`${path}/reviews`}>
+                           <Reviews></Reviews>
+                        </Route>
                     </Switch>
 
                 </div>
 
             </div>
+            
         </div>
     );
 };

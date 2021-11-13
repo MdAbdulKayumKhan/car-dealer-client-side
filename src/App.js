@@ -14,6 +14,7 @@ import PageNotFound from './components/PageNotFound/PageNotFound';
 import AddProduct from './components/AddProduct/AddProduct';
 import Order from './components/Order/Order';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
               <PageNotFound></PageNotFound>
             </Route>
           </Switch>
+          
         </Router>
       </AuthProvider>
     </div>

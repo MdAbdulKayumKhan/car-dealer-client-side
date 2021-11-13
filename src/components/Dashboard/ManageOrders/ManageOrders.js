@@ -11,7 +11,7 @@ const ManageOrders = () => {
                 console.log(data)
                 setOrders(data)
             })
-    }, [orders])
+    }, [])
     let i = 1;
 
     const handleDelete = id => {

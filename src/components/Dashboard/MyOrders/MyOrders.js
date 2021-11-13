@@ -11,7 +11,7 @@ const MyOrders = () => {
                 console.log(data)
                 setOrders(data)
             })
-    }, [orders])
+    }, [])
     let i = 1;
 
     const handleDelete = id => {
@@ -47,7 +47,7 @@ const MyOrders = () => {
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                {!isLoading &&
+               
                     <tbody>
                     {
                         orders.map(order => (
@@ -64,12 +64,8 @@ const MyOrders = () => {
                     }
 
 
-                </tbody>}
-                {isLoading &&
-                    <div class="spinner-grow text-primary" role="status">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                }
+                </tbody>
+                
             </table>
         </div>
     );
