@@ -11,4 +11,4 @@
 ## Normal user manage his/her orders and make new order , make review 
 ## heroku and firebase to deply 
 ## Admin can manage all functionality 
-## Add new Product, make admin, palse order, update status and delete anyone's order
+## Add new Product, make admin, plase order, update status and delete anyone's order
