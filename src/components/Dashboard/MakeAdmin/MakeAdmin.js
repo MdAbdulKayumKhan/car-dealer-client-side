@@ -7,7 +7,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/users/admin/', {
+        fetch('https://safe-brook-81042.herokuapp.com/users/admin/', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -24,9 +24,9 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <h1>this is make admin</h1>
+            
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("email", { required: true })} placeholder="email" />
+                <input style={{width: '40%'}} {...register("email", { required: true })} placeholder="email" />
                 <input type="submit" />
             </form>
             {success && <p>admin added</p>}

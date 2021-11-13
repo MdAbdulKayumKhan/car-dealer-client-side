@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import Banner from '../../Shared/Banner/Banner';
 import Navigation from '../../Shared/Navigation/Navigation';
 import './Home.css';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
+    const { isLoading } = useAuth();
     useEffect(() => {
         fetch('https://safe-brook-81042.herokuapp.com/product')
             .then(res => res.json())
@@ -24,7 +26,8 @@ const Home = () => {
                 Explore Our Collection
             </div></h1>
             <div class="card-deck container">
-                <div className="row">
+                {!isLoading &&
+                    <div className="row">
                     {
                         listedProducts.map(listedProduct => (
                             <div key={listedProduct._id} class="card col-12 col-md-4 col-lg-4 p-3 gap-2">
@@ -38,14 +41,19 @@ const Home = () => {
                                 <div class="card-footer">
                                     <small class="text-muted">
                                         <Link to={`/order/${listedProduct._id}`}>
-                                        <button type="button" class="btn btn-primary btn-sm">Purchase Now</button>
+                                            <button type="button" class="btn btn-primary btn-sm">Purchase Now</button>
                                         </Link>
                                     </small>
                                 </div>
                             </div>
                         ))
                     }
-                </div>
+                </div>}
+                {isLoading &&
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                }
             </div>
 
         </div>

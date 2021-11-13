@@ -76,12 +76,12 @@ const useFirebase = () => {
 
     // admin fetch
     useEffect(()=>{
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://safe-brook-81042.herokuapp.com/users/${user.email}`)
         .then(res => res.json())
         .then(data => {
             setIsAdmin(data.admin)
         })
-    }, [user.email])
+    }, [user?.email])
 
     // logout 
     const logOut = () => {
@@ -97,7 +97,7 @@ const useFirebase = () => {
     // user data save into DB
     const saveUser = (email, displayName, method) =>{
         const user = {email, displayName};
-        fetch('http://localhost:5000/users', {
+        fetch('https://safe-brook-81042.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

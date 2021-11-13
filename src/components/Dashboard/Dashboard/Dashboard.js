@@ -10,6 +10,10 @@ import {
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 import AddProduct from '../../AddProduct/AddProduct';
+import PaymentSystem from '../PaymentSystem/PaymentSystem';
+import MyOrders from '../MyOrders/MyOrders';
+import ManageOrders from '../ManageOrders/ManageOrders';
+import ManageProducts from '../ManageProducts/ManageProducts';
 
 
 
@@ -32,6 +36,7 @@ const Dashboard = () => {
                 <Link className="w3-bar-item w3-button" to={`${url}`}>Dashboard</Link>
                 <Link className="w3-bar-item w3-button" to={`${url}/myOrders`}>My Orders</Link>
                 <Link className="w3-bar-item w3-button" to={`${url}/reviews`}>Review</Link>
+                <Link className="w3-bar-item w3-button" to={`${url}/paymentSystem`}>Pay</Link>
                {isAdmin && <>
                 <Link className="w3-bar-item w3-button" to={`${url}/makeAdmin`}>Make Admin</Link>
                 <Link className="w3-bar-item w3-button" to={`${url}/manageAllOrders`}>Manage All Orders</Link>
@@ -51,14 +56,26 @@ const Dashboard = () => {
                 <div class="w3-container">
                     <Switch>
                         <Route exact path={path}>
-                            <h3>Please select a topic.</h3>
+                            <MyOrders></MyOrders>
                         </Route>
                         <Route path={`${path}/makeAdmin`}>
-                            <h2>this is make admin</h2>
+                            <h2>Make Admin</h2>
                             <MakeAdmin></MakeAdmin>
                         </Route>
                         <Route path={`${path}/addProducts`}>
                             <AddProduct></AddProduct>
+                        </Route>
+                        <Route path={`${path}/myOrders`}>
+                            <MyOrders></MyOrders>
+                        </Route>
+                        <Route path={`${path}/manageAllOrders`}>
+                            <ManageOrders></ManageOrders>
+                        </Route>
+                        <Route path={`${path}/manageProducts`}>
+                            <ManageProducts></ManageProducts>
+                        </Route>
+                        <Route path={`${path}/paymentSystem`}>
+                            <PaymentSystem></PaymentSystem>
                         </Route>
                     </Switch>
 
