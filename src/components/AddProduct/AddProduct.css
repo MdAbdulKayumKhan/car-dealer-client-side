@@ -5,8 +5,8 @@
     flex-direction: column;
     row-gap: 20px;
 }
-.login input{
-    width: 70%;
+.login input, textarea{
+    width: 40%;
 }
 .login-sec{
     background-color: rgb(255, 245, 245);

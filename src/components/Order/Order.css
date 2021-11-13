@@ -1,26 +1,24 @@
 
-.login form{
+.order form{
     display: flex;
     align-items: center;
     flex-direction: column;
     row-gap: 20px;
 }
-.login input{
+.order input, textarea{
     width: 70%;
 }
-.login-sec{
+.order-sec{
     background-color: rgb(255, 245, 245);
     padding-top: 40px;
     padding-bottom: 50px;
 }
 @media only screen and (max-device-width: 960px) {
-    .login input{
+    .order input,textarea {
         width: 80%;
     }
-    .car-img{
-        padding: 70px;
-    }
-    .login-sec{
+    
+    .order-sec{
         background-color: rgb(211,211,211);
         padding-top: 10px;
         padding-bottom: 20px;
